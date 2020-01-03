@@ -14,18 +14,6 @@ namespace :style do
     # abort rake on failure
     task.fail_on_error = true
   end
-
-  require 'foodcritic'
-  desc 'Run Chef style checks'
-  FoodCritic::Rake::LintTask.new(:chef) do |t|
-    # 'search_gems' doesn't work, but :search_gems does
-    t.options = {
-      :search_gems => true, # allows us to add addl gems with more rules
-      :fail_tags => ['correctness'],
-      :tags => ['~FC085'], # Skip updated_by_last_action warnings for now
-      :chef_version => '12.4.1',
-    }
-  end
 end
 
 desc 'Run all style checks'
