@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 group :lint do
   gem 'cookstyle'
-  gem 'foodcritic', '~> 16.0'
 end
 
 group :unit do
@@ -32,7 +31,6 @@ end
 group :development do
   gem 'growl'
   gem 'guard'
-  gem 'guard-foodcritic'
   gem 'guard-kitchen'
   gem 'guard-rubocop'
   gem 'pry-nav'
